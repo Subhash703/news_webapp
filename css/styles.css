@@ -202,16 +202,35 @@ section.news__pinposts .news__pin-posts_scrollar {
 section.news__pinposts .news__pin-posts_scrollar .pin_post {
   display: inline-block;
   min-width: 200px;
+  margin: 5px;
+  color: #fff;
   border-right: 1px solid #000;
+  background-image: url("../src/news_img1.jpg");
+  background-size: cover;
+  background-position: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+section.news__pinposts .news__pin-posts_scrollar .pin_post .bg-image {
+  position: absolute;
+}
+
+section.news__pinposts .news__pin-posts_scrollar .pin_post .news_text-content {
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+section.news__pinposts .news__pin-posts_scrollar .pin_post .news_text-content small {
+  font-size: 10px;
 }
 
 section.news__pinposts .news__pin-posts_scrollar::-webkit-scrollbar {
@@ -286,37 +305,41 @@ section.news__pinposts .news__pin-posts_scrollar::-webkit-scrollbar {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: signup;
-}
-
-.news__home_main .news__home_main-signup .form-container .form-group {
-  width: 70%;
-  margin-bottom: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 0.5rem;
-  margin-left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-.news__home_main .news__home_main-signup .form-container .form-group input {
-  padding: 0.4rem 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .news__home_main .news__home_main-comment {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: comment;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.news__home_main .news__home_main-comment .form-container .form-group {
+.news__home_main .form-container .form-group {
   width: 70%;
   margin-bottom: 0.5rem;
   display: -webkit-box;
@@ -333,12 +356,16 @@ section.news__pinposts .news__pin-posts_scrollar::-webkit-scrollbar {
           transform: translateX(-50%);
 }
 
-.news__home_main .news__home_main-comment .form-container .form-group input {
+.news__home_main .form-container .form-group input {
   padding: 0.4rem 1rem;
 }
 
+.news__home_main .form-container .form-group label {
+  margin-right: 2em;
+}
+
 .news__home_main .form-submit {
-  padding: 0.3rem 1rem;
+  padding: 0.5rem 1rem;
   outline: none;
   border: none;
   color: #999;
@@ -346,9 +373,7 @@ section.news__pinposts .news__pin-posts_scrollar::-webkit-scrollbar {
   border-radius: 0.4rem;
   -ms-grid-column-align: center;
       justify-self: center;
-  margin-left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  margin: 0 6.4em;
 }
 
 .news__home_main .news__home_main-latest-news {
@@ -475,8 +500,6 @@ section.news__pinposts .news__pin-posts_scrollar::-webkit-scrollbar {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 1rem;
-  border-right: 1px dashed rgba(0, 0, 0, 0.2);
-  border-top: 1px dashed rgba(0, 0, 0, 0.2);
   margin: 10px;
 }
 
@@ -492,6 +515,8 @@ section.news__pinposts .news__pin-posts_scrollar::-webkit-scrollbar {
           align-items: center;
   font-size: 1.2rem;
   font-weight: 800;
+  border-bottom: 2px solid #111319;
+  border-bottom-right-radius: 5px;
 }
 
 .news_links .news_category .title .fas {
@@ -507,6 +532,7 @@ section.news__pinposts .news__pin-posts_scrollar::-webkit-scrollbar {
 .news_links .news_category li a {
   color: #111319;
   margin-left: 1rem;
+  font-size: 14px;
 }
 
 .news_links .news_category li a:hover {
